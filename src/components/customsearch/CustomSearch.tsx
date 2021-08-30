@@ -46,8 +46,21 @@ const CustomSearch = () => {
       key: "birthAt",
     },
   ];
-  const keys = Object.keys(users[0]);
-  const OPTIONS = keys;
+  // const keys = Object.keys(users[0]);
+
+  const usersKey = users
+    .reduce((initialized: string[], next) => {
+      const keys = Object.keys(next);
+      return initialized.concat(keys);
+    }, [])
+    .reduce((initialized: string[], next) => {
+      if (!initialized.includes(next)) {
+        initialized.push(next);
+      }
+      return initialized;
+    }, []);
+
+  const OPTIONS = usersKey;
 
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const handleChange = (list: string[]) => {
