@@ -73,7 +73,7 @@ const CustomSearch = () => {
       <Table columns={columns} dataSource={users} rowKey={"id"} />
       <Select
         mode='multiple'
-        placeholder='Inserted are removed'
+        placeholder='Add your search item'
         value={selectedItems}
         onChange={handleChange}
         style={{ width: "100%" }}

@@ -4,7 +4,6 @@ interface SelectedItemsProps {
   selectedItems: string[];
 }
 const SelectedSearchItem = (props: SelectedItemsProps) => {
-  console.log(props.selectedItems);
   return (
     <div style={{ textAlign: "left", paddingTop: "60px" }}>
       <div>Selected Search With</div>
