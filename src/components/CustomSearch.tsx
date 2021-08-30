@@ -15,14 +15,19 @@ const CustomSearch = () => {
       key: "firstName",
     },
     {
-      title: "Birth",
-      dataIndex: "birthAt",
-      key: "birthAt",
-    },
-    {
       title: "Email",
       dataIndex: "email",
       key: "email",
+    },
+    {
+      title: "Phone",
+      dataIndex: "phone",
+      key: "phone",
+    },
+    {
+      title: "Field",
+      dataIndex: "field",
+      key: "field",
     },
     {
       title: "City",
@@ -35,9 +40,9 @@ const CustomSearch = () => {
       key: "adress",
     },
     {
-      title: "Field",
-      dataIndex: "field",
-      key: "field",
+      title: "Birth At",
+      dataIndex: "birthAt",
+      key: "birthAt",
     },
   ];
 
