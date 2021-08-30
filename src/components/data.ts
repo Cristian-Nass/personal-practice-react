@@ -1,5 +1,6 @@
 export const users = [
     {
+        id: 1,
         firstName: "Cristian",
         lastName: "Nass",
         email: "cristian@gmail.com",
@@ -10,6 +11,7 @@ export const users = [
         birthAt: 1981
     },
     {
+        id: 2,
         firstName: "Erik",
         lastName: "Lundin",
         email: "erik@gmail.com",
@@ -20,6 +22,7 @@ export const users = [
         birthAt: 1980,
     },
     {
+        id: 3,
         firstName: "Stam",
         lastName: "Kurjan",
         email: "stam@yahoo.com",
@@ -30,6 +33,7 @@ export const users = [
         birthAt: 1990,
     },
     {
+        id: 4,
         firstName: "Jack",
         lastName: "Daniel",
         email: "jack@yahoo.com",
@@ -40,6 +44,7 @@ export const users = [
         birthAt: 1995,
     },
     {
+        id: 5,
         firstName: "Sara",
         lastName: "Kashani",
         email: "sara@yahoo.com",
@@ -50,6 +55,7 @@ export const users = [
         birthAt: 1993,
     },
     {
+        id: 6,
         firstName: "Sofia",
         lastName: "Erikson",
         email: "sofi@yahoo.com",
@@ -60,6 +66,7 @@ export const users = [
         birthAt: 1993,
     },
     {
+        id: 7,
         firstName: "Sara",
         lastName: "Kermani",
         email: "kermani@yahoo.com",
@@ -70,6 +77,7 @@ export const users = [
         birthAt: 1986,
     },
     {
+        id: 8,
         firstName: "Johan",
         lastName: "Lindau",
         email: "johan@knowit.se",

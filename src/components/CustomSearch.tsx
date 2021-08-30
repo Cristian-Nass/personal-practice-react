@@ -45,8 +45,9 @@ const CustomSearch = () => {
       key: "birthAt",
     },
   ];
+  console.log("Key", Object.keys(users[0]));
 
-  return <Table columns={columns} dataSource={users} />;
+  return <Table columns={columns} dataSource={users} rowKey={"id"} />;
 };
 
 export default CustomSearch;
