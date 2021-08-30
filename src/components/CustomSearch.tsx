@@ -47,11 +47,11 @@ const CustomSearch = () => {
   ];
   const OPTIONS = ["Apples", "Nails", "Bananas", "Helicopters"];
 
-  const [selectedItems, setSelectedItems] = useState("");
-  const handleChange = (selectedItems: string) => {
-    setSelectedItems(selectedItems);
-    console.log(selectedItems);
+  const [selectedItems, setSelectedItems] = useState<string[]>([]);
+  const handleChange = (list: string[]) => {
+    setSelectedItems(list);
   };
+  console.log(selectedItems);
 
   const filteredOptions = OPTIONS.filter((o) => !selectedItems.includes(o));
   return (
