@@ -1,5 +1,5 @@
-import React from "react";
-import { Table } from "antd";
+import React, { useState } from "react";
+import { Table, Select } from "antd";
 import { users } from "./data";
 
 const CustomSearch = () => {
@@ -45,9 +45,33 @@ const CustomSearch = () => {
       key: "birthAt",
     },
   ];
-  console.log("Key", Object.keys(users[0]));
+  const OPTIONS = ["Apples", "Nails", "Bananas", "Helicopters"];
 
-  return <Table columns={columns} dataSource={users} rowKey={"id"} />;
+  const [selectedItems, setSelectedItems] = useState("");
+  const handleChange = (selectedItems: string) => {
+    setSelectedItems(selectedItems);
+    console.log(selectedItems);
+  };
+
+  const filteredOptions = OPTIONS.filter((o) => !selectedItems.includes(o));
+  return (
+    <>
+      <Table columns={columns} dataSource={users} rowKey={"id"} />
+      <Select
+        mode='multiple'
+        placeholder='Inserted are removed'
+        value={selectedItems}
+        onChange={handleChange}
+        style={{ width: "100%" }}
+      >
+        {filteredOptions.map((item) => (
+          <Select.Option key={item} value={item}>
+            {item}
+          </Select.Option>
+        ))}
+      </Select>
+    </>
+  );
 };
 
 export default CustomSearch;
