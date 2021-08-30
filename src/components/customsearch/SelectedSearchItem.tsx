@@ -4,9 +4,9 @@ interface SelectedItemsProps {
 const SelectedSearchItem = (props: SelectedItemsProps) => {
   console.log(props.selectedItems);
   return (
-    <>
-      <div>Hello</div>
-    </>
+    <div style={{ textAlign: "left", paddingTop: "20px" }}>
+      <div>Selected Search With</div>
+    </div>
   );
 };
 
