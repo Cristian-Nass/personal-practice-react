@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Table, Select } from "antd";
-import { users } from "./data";
+import { users } from "../data";
+import SelectedSearchItem from "./SelectedSearchItem";
 
 const CustomSearch = () => {
   const columns = [
@@ -51,7 +52,6 @@ const CustomSearch = () => {
   const handleChange = (list: string[]) => {
     setSelectedItems(list);
   };
-  console.log(selectedItems);
 
   const filteredOptions = OPTIONS.filter((o) => !selectedItems.includes(o));
   return (
@@ -70,6 +70,7 @@ const CustomSearch = () => {
           </Select.Option>
         ))}
       </Select>
+      <SelectedSearchItem selectedItems={selectedItems} />
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import "antd/dist/antd.css";
-import CustomSearch from "./components/CustomSearch";
+import CustomSearch from "./components/customsearch/CustomSearch";
 // import PasswordGenerators from "./components/PasswordGenerators";
 
 function App() {
