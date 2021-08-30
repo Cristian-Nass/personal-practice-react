@@ -46,7 +46,8 @@ const CustomSearch = () => {
       key: "birthAt",
     },
   ];
-  const OPTIONS = ["Apples", "Nails", "Bananas", "Helicopters"];
+  const keys = Object.keys(users[0]);
+  const OPTIONS = keys;
 
   const [selectedItems, setSelectedItems] = useState<string[]>([]);
   const handleChange = (list: string[]) => {
@@ -70,7 +71,7 @@ const CustomSearch = () => {
           </Select.Option>
         ))}
       </Select>
-      {selectedItems.length > 1 && (
+      {selectedItems.length >= 1 && (
         <SelectedSearchItem selectedItems={selectedItems} />
       )}
     </>
