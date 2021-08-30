@@ -70,7 +70,9 @@ const CustomSearch = () => {
           </Select.Option>
         ))}
       </Select>
-      <SelectedSearchItem selectedItems={selectedItems} />
+      {selectedItems.length > 1 && (
+        <SelectedSearchItem selectedItems={selectedItems} />
+      )}
     </>
   );
 };
