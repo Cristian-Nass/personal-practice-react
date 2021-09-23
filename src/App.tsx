@@ -2,9 +2,11 @@ import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import "./App.css";
 import "antd/dist/antd.css";
+import Home from "./components/Home";
 import CustomSearch from "./components/customsearch/CustomSearch";
 import Table from "./components/Table";
 import Navbar from "./components/Navbar";
+import PasswordGenerators from "./components/PasswordGenerators";
 // import PasswordGenerators from "./components/PasswordGenerators";
 
 function App() {
@@ -13,8 +15,12 @@ function App() {
       {/* <PasswordGenerators /> */}
       <BrowserRouter>
         <Navbar />
-        <Route path='/custom-search' component={CustomSearch} />
-        <Route path='/table' component={Table} />
+        <Switch>
+          <Route path='/' exact component={Home} />
+          <Route path='/custom-search' component={CustomSearch} />
+          <Route path='/password-generators' component={PasswordGenerators} />
+          <Route path='/table' component={Table} />
+        </Switch>
       </BrowserRouter>
     </div>
   );
